@@ -1,0 +1,160 @@
+/* Estilo Global */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Container Centralizado para os Botões */
+.button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilização para os Botões */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Botão de Deletar com Cor Diferente */
+.btn-delete {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Lista de Advogados */
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+ul li {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #007BFF;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+ul li strong {
+  color: #007BFF;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+ul li p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+/* Grupo de informações com divisor */
+ul li .info-group {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+ul li .info-label {
+  font-weight: bold;
+  color: #555;
+  margin-right: 5px;
+}
+
+ul li form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #007BFF;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}

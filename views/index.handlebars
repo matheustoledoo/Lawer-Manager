@@ -1,0 +1,27 @@
+<h1>{{title}}</h1>
+
+<div class="button-container">
+    <a href="/lawyers" class="btn">Ver Todos os Advogados</a>
+</div>
+
+<form action="/lawyers/add" method="POST">
+    <label for="name">Nome:</label>
+    <input type="text" name="name" required>
+    
+    <label for="oab">OAB:</label>
+    <input type="text" name="oab" required>
+
+    <label for="phone">Telefone:</label>
+    <input type="text" name="phone" required>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" required>
+
+    <label for="caseName">Nome do Processo:</label>
+    <input type="text" name="caseName" required>
+
+    <label for="caseDate">Data do Processo:</label>
+    <input type="date" name="caseDate" required>
+
+    <button type="submit">Cadastrar Advogado</button>
+</form>

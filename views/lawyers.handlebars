@@ -1,0 +1,55 @@
+<h2>{{title}}</h2>
+
+<!-- Botão para voltar à página de cadastro -->
+<div class="button-container">
+    <a href="/" class="btn">Adicionar Novo Advogado</a>
+</div>
+
+<form method="GET" action="/lawyers">
+    <input type="text" name="search" placeholder="Pesquisar por nome ou processo">
+    <button type="submit" class="btn">Pesquisar</button>
+</form>
+
+<form action="/lawyers/export" method="GET">
+    <label for="date">Data de Cadastro:</label>
+    <input type="date" name="date" required>
+    <button type="submit" class="btn">Exportar para Excel</button>
+</form>
+
+<ul>
+    {{#each lawyers}}
+    <li>
+        <strong>{{this.name}}</strong>
+
+        <div class="info-group">
+            <span class="info-label">OAB:</span> {{this.oab}}
+        </div>
+
+        <div class="info-group">
+            <span class="info-label">Telefone:</span> {{this.phone}}
+        </div>
+
+        <div class="info-group">
+            <span class="info-label">Email:</span> {{this.email}}
+        </div>
+
+        <div class="info-group">
+            <span class="info-label">Nome do Processo:</span> {{this.caseName}}
+        </div>
+
+        <div class="info-group">
+            <span class="info-label">Data do Processo:</span> {{this.caseDateFormatted}}
+        </div>
+
+        <form action="/lawyers/delete/{{this._id}}" method="POST">
+            <button type="submit" class="btn-delete" onclick="return confirm('Tem certeza que deseja deletar este advogado?')">Deletar</button>
+        </form>
+    </li>
+    {{/each}}
+</ul>
+
+
+<!-- Outro botão para adicionar advogado, caso a lista seja longa -->
+<div class="button-container">
+    <a href="/" class="btn">Adicionar Novo Advogado</a>
+</div>

@@ -24,10 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Conexão com o banco de dados
 async function connectDB() {
   try {
-    await mongoose.connect(process.env.DB_CONNECTION, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(process.env.DB_CONNECTION);
     console.log('Conectado ao banco de dados');
   } catch (err) {
     console.error('Erro ao conectar ao banco de dados', err);
